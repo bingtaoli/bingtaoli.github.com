@@ -87,17 +87,17 @@
 <meta name="description" content="openresty&amp;#x5927;&amp;#x540D;&amp;#x5982;&amp;#x96F7;&amp;#x8D2F;&amp;#x8033;&amp;#xFF0C;&amp;#x6709;&amp;#x7740;&amp;#x6D3B;&amp;#x8DC3;&amp;#x7684;&amp;#x793E;&amp;#x533A;&amp;#x548C;&amp;#x5E7F;&amp;#x6CDB;&amp;#x7684;&amp;#x7528;&amp;#x6237;&amp;#x3002;&amp;#x5B83;&amp;#x501F;&amp;#x52A9">
 <meta property="og:type" content="article">
 <meta property="og:title" content="openresty进行一致性hash负载均衡">
-<meta property="og:url" content="http://yoursite.com/2017/03/19/openresty进行一致性hash负载均衡/index.html">
+<meta property="og:url" content="http://yoursite.com/2017/03/19/openresty_consist_hash/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="openresty&amp;#x5927;&amp;#x540D;&amp;#x5982;&amp;#x96F7;&amp;#x8D2F;&amp;#x8033;&amp;#xFF0C;&amp;#x6709;&amp;#x7740;&amp;#x6D3B;&amp;#x8DC3;&amp;#x7684;&amp;#x793E;&amp;#x533A;&amp;#x548C;&amp;#x5E7F;&amp;#x6CDB;&amp;#x7684;&amp;#x7528;&amp;#x6237;&amp;#x3002;&amp;#x5B83;&amp;#x501F;&amp;#x52A9">
-<meta property="og:image" content="http://yoursite.com/2017/03/19/openresty进行一致性hash负载均衡/nginxconfig_openresty2.png">
-<meta property="og:image" content="http://yoursite.com/2017/03/19/openresty进行一致性hash负载均衡/localhost8001.png">
-<meta property="og:image" content="http://yoursite.com/2017/03/19/openresty进行一致性hash负载均衡/localhost8001_key=hello.png">
-<meta property="og:updated_time" content="2017-03-19T14:51:23.000Z">
+<meta property="og:image" content="http://yoursite.com/2017/03/19/openresty_consist_hash/nginxconfig_openresty2.png">
+<meta property="og:image" content="http://yoursite.com/2017/03/19/openresty_consist_hash/localhost8001.png">
+<meta property="og:image" content="http://yoursite.com/2017/03/19/openresty_consist_hash/localhost8001_key=hello.png">
+<meta property="og:updated_time" content="2017-03-19T14:58:40.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="openresty进行一致性hash负载均衡">
 <meta name="twitter:description" content="openresty&amp;#x5927;&amp;#x540D;&amp;#x5982;&amp;#x96F7;&amp;#x8D2F;&amp;#x8033;&amp;#xFF0C;&amp;#x6709;&amp;#x7740;&amp;#x6D3B;&amp;#x8DC3;&amp;#x7684;&amp;#x793E;&amp;#x533A;&amp;#x548C;&amp;#x5E7F;&amp;#x6CDB;&amp;#x7684;&amp;#x7528;&amp;#x6237;&amp;#x3002;&amp;#x5B83;&amp;#x501F;&amp;#x52A9">
-<meta name="twitter:image" content="http://yoursite.com/2017/03/19/openresty进行一致性hash负载均衡/nginxconfig_openresty2.png">
+<meta name="twitter:image" content="http://yoursite.com/2017/03/19/openresty_consist_hash/nginxconfig_openresty2.png">
 
 
 
@@ -118,7 +118,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/03/19/openresty进行一致性hash负载均衡/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/03/19/openresty_consist_hash/"/>
 
   <title> openresty进行一致性hash负载均衡 | Hexo </title>
 </head>
@@ -284,7 +284,7 @@
 <p>&#x8FD9;&#x4E24;&#x5929;&#x5F00;&#x59CB;&#x8BA4;&#x771F;&#x5173;&#x6CE8;&#x8D77;&#x8FD9;&#x4E2A;&#x9879;&#x76EE;&#x6765;&#xFF0C;&#x5728;github&#x4E0B;&#x8F7D;&#x6E90;&#x7801;&#x5E76;&#x4E14;&#x8FD0;&#x884C;&#x4E86;&#x8BD5;&#x8BD5;&#xFF0C;&#x89C9;&#x5F97;&#x4E0D;&#x9519;&#x3002;&#x672C;&#x4EBA;&#x4EE5;<a href="https://github.com/agentzh/lua-resty-balancer" target="_blank" rel="external">https://github.com/agentzh/lua-resty-balancer</a>&#x8FD9;&#x4E2A;&#x9879;&#x76EE;&#x4E3A;&#x4F8B;&#xFF0C;&#x4ECB;&#x7ECD;&#x600E;&#x4E48;&#x4F7F;&#x7528;openresty&#x8FDB;&#x884C;&#x4E00;&#x81F4;&#x6027;hash&#x7684;&#x8D1F;&#x8F7D;&#x5747;&#x8861;</p>
 <p>&#x4E00;&#x5207;&#x90FD;&#x5728;&#x6211;&#x7684;mbpr&#x4E0A;&#x8FDB;&#x884C;&#x3002;<br><a id="more"></a></p>
 <p>&#x6D41;&#x7A0B;&#x56FE;&#xFF1A;</p>
-<p><img src="/2017/03/19/openresty&#x8FDB;&#x884C;&#x4E00;&#x81F4;&#x6027;hash&#x8D1F;&#x8F7D;&#x5747;&#x8861;/nginxconfig_openresty2.png" width="50%"></p>
+<p><img src="/2017/03/19/openresty_consist_hash/nginxconfig_openresty2.png" width="50%"></p>
 <p>&#x5176;&#x4E2D;nginx1&#x548C;nginx2&#x6307;&#x7684;&#x662F;&#x6211;&#x5728;mac&#x4E0A;&#x6309;&#x7167;&#x4E0D;&#x540C;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x542F;&#x52A8;&#x4E86;&#x4E24;&#x4E2A;nginx&#xFF0C;&#x5176;&#x4E2D;&#x76D1;&#x542C;8001&#x7AEF;&#x53E3;nginx1&#x7684;&#x4E3A;&#x670D;&#x52A1;&#x5165;&#x53E3;&#xFF0C;&#x7279;&#x522B;&#x8BF4;&#x660E;&#x4E0B;&#x8FD9;&#x4E2A;nginx1&#x662F;openresty&#x63D0;&#x4F9B;&#x7684;nginx&#xFF0C;&#x56E0;&#x4E3A;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x4F7F;&#x7528;chash&#x7684;&#x5E93;&#xFF1B;&#x800C;nginx2:8080&#x5219;&#x4E3A;&#x666E;&#x901A;&#x7684;nginx&#xFF0C;&#x5B83;&#x548C;apache:80&#x90FD;&#x662F;&#x5145;&#x5F53;&#x540E;&#x7AEF;&#x670D;&#x52A1;&#x5668;&#x7684;&#x89D2;&#x8272;&#x3002;</p>
 <h2 id="&#x7F16;&#x8BD1;chash-so"><a href="#&#x7F16;&#x8BD1;chash-so" class="headerlink" title="&#x7F16;&#x8BD1;chash.so"></a>&#x7F16;&#x8BD1;chash.so</h2><p>openresty&#x4E0D;&#x5305;&#x542B;<code>lua-resty-balancer</code>&#x8FD9;&#x4E2A;&#x9879;&#x76EE;&#xFF0C;&#x6240;&#x4EE5;&#x9700;&#x8981;&#x81EA;&#x5DF1;&#x7F16;&#x8BD1;&#x7136;&#x540E;&#x751F;&#x6210;so&#x6587;&#x4EF6;&#x3002;</p>
 <p>clone&#x4E0B;&#x8F7D;&#x4EE3;&#x7801;&#xFF0C;&#x7136;&#x540E;&#x4FEE;&#x6539;Makefile&#xFF0C;&#x8BBE;&#x7F6E;lua&#x7684;&#x76EE;&#x5F55;&#x3002;&#x5176;&#x4E2D;&#x5728;macOS&#x4E0A;&#x7F16;&#x8BD1;&#xFF0C;&#x8981;&#x4FEE;&#x6539;CFLAGS&#x589E;&#x52A0;<code>-Du_char=&quot;unsigned char&quot;</code></p>
@@ -300,9 +300,9 @@
 <p>apache:80&#x662F;&#x9ED8;&#x8BA4;&#x7684;apache&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x4FEE;&#x6539;&#x3002;</p>
 <h2 id="&#x6D4B;&#x8BD5;"><a href="#&#x6D4B;&#x8BD5;" class="headerlink" title="&#x6D4B;&#x8BD5;"></a>&#x6D4B;&#x8BD5;</h2><p>&#x628A;nginx1&#x3001;nginx2&#x3001;apache&#x542F;&#x52A8;&#x540E;&#x3002;</p>
 <p>&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x8F93;&#x5165;<code>localhost:8001</code>&#xFF0C;&#x6B64;&#x65F6;<code>arg_key</code>&#x4E3A;nil:</p>
-<p><img src="/2017/03/19/openresty&#x8FDB;&#x884C;&#x4E00;&#x81F4;&#x6027;hash&#x8D1F;&#x8F7D;&#x5747;&#x8861;/localhost8001.png" width="80%"></p>
+<p><img src="/2017/03/19/openresty_consist_hash/localhost8001.png" width="80%"></p>
 <p>&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x8F93;&#x5165;<code>localhost:8001?key=hello</code>&#xFF0C;&#x6B64;&#x65F6;<code>arg_key</code>&#x4E3A;<code>&apos;hello&apos;</code>:</p>
-<p><img src="/2017/03/19/openresty&#x8FDB;&#x884C;&#x4E00;&#x81F4;&#x6027;hash&#x8D1F;&#x8F7D;&#x5747;&#x8861;/localhost8001_key=hello.png" width="80%"></p>
+<p><img src="/2017/03/19/openresty_consist_hash/localhost8001_key=hello.png" width="80%"></p>
 <p>&#x4E0A;&#x9762;&#x8868;&#x793A;&#x6211;&#x4EEC;&#x7684;&#x8D1F;&#x8F7D;&#x5747;&#x8861;&#x5DF2;&#x7ECF;&#x5B8C;&#x6210;&#x4E86;&#x3002;</p>
 <h2 id="&#x603B;&#x7ED3;"><a href="#&#x603B;&#x7ED3;" class="headerlink" title="&#x603B;&#x7ED3;"></a>&#x603B;&#x7ED3;</h2><p>&#x6574;&#x4E2A;&#x6D41;&#x7A0B;&#x4E0D;&#x7B97;&#x590D;&#x6742;&#xFF0C;&#x5468;&#x672B;&#x4E0B;&#x96E8;&#xFF0C;&#x5728;&#x5BB6;&#x4E2D;&#x5C31;&#x641E;&#x4E86;&#x641E;&#x6743;&#x5F53;&#x6D88;&#x9063;&#x3002;&#x6628;&#x5929;&#x5728;&#x516C;&#x53F8;&#x770B;&#x4E86;@agentzh&#x5728;&#x67D0;&#x4E00;&#x4E2A;nginx&#x5927;&#x4F1A;&#x4E0A;&#x5206;&#x4EAB;OR&#x6280;&#x672F;&#x6808;&#xFF0C;&#x89C9;&#x5F97;&#x6625;&#x54E5;&#x771F;&#x7684;&#x662F;&#x5F88;&#x559C;&#x6B22;&#x8FD9;&#x4E00;&#x884C;&#xFF0C;&#x5E76;&#x4E14;&#x5206;&#x4EAB;&#x7684;&#x65F6;&#x5019;&#x5927;&#x90E8;&#x5206;&#x65F6;&#x95F4;&#x662F;&#x5E26;&#x7740;&#x5FAE;&#x7B11;&#x7684;&#xFF0C;&#x8BA9;&#x4EBA;&#x611F;&#x89C9;&#x6280;&#x672F;&#x4EBA;&#x5458;&#x7684;&#x81EA;&#x4FE1;&#x548C;&#x5E73;&#x548C;&#x3002;</p>
 
